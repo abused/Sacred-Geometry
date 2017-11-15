@@ -1,0 +1,16 @@
+[
+{
+  "modid": "sacredgeo",
+  "name": "Sacred Geometry",
+  "description": "Adding unique and unusual shapes and magic elements into minecraft.",
+  "version": "${version}",
+  "mcversion": "${mcversion}",
+  "url": "",
+  "updateUrl": "",
+  "authorList": ["abused_master"],
+  "credits": "DivineAspect for all the ideas and help",
+  "logoFile": "",
+  "screenshots": [],
+  "dependencies": []
+}
+]
