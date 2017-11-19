@@ -2,6 +2,7 @@ package abused_master.sacredgeometry.proxy;
 
 import abused_master.sacredgeometry.Info;
 import abused_master.sacredgeometry.registry.ModResources;
+import abused_master.sacredgeometry.registry.TileEntityRegistry;
 import net.minecraftforge.client.event.ModelRegistryEvent;
 import net.minecraftforge.client.model.obj.OBJLoader;
 import net.minecraftforge.fml.common.Mod;
@@ -18,6 +19,7 @@ public class ClientProxy extends CommonProxy {
     public void preInit(FMLPreInitializationEvent e) {
         super.preInit(e);
         OBJLoader.INSTANCE.addDomain(Info.MODID);
+        TileEntityRegistry.regTESR();
     }
 
     @Override

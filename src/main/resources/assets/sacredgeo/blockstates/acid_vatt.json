@@ -1,0 +1,6 @@
+{
+    "variants": {
+        "normal": { "model": "sacredgeo:acid_vatt" },
+        "inventory": { "model": "sacredgeo:acid_vatt" }
+   }
+}

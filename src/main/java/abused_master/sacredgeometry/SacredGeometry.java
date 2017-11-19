@@ -1,5 +1,6 @@
 package abused_master.sacredgeometry;
 
+import abused_master.sacredgeometry.api.AcidVattIngredients;
 import abused_master.sacredgeometry.proxy.CommonProxy;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.init.Items;
@@ -13,6 +14,8 @@ import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 
 @Mod(modid = Info.MODID, name = Info.NAME, version = Info.Version, acceptedMinecraftVersions = Info.ACCEPTED_MINECRAFT)
 public class SacredGeometry {
+
+    public static AcidVattIngredients vattIngredients = new AcidVattIngredients();
 
     @Mod.Instance
     public static SacredGeometry instance;

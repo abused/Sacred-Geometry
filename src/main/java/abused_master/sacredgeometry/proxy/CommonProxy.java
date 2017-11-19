@@ -1,6 +1,7 @@
 package abused_master.sacredgeometry.proxy;
 
 import abused_master.sacredgeometry.registry.ModResources;
+import abused_master.sacredgeometry.registry.TileEntityRegistry;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
@@ -15,6 +16,7 @@ public class CommonProxy {
     }
 
     public void init(FMLInitializationEvent e) {
+        TileEntityRegistry.regTE();
     }
 
     public void postInit(FMLPostInitializationEvent e) {

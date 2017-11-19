@@ -6,11 +6,11 @@ import net.minecraft.init.Blocks;
 import java.util.ArrayList;
 import java.util.List;
 
-public class AcidVatIngredients {
+public class AcidVattIngredients {
 
     private List<Block> input = new ArrayList<>();
 
-    public AcidVatIngredients() {
+    public AcidVattIngredients() {
         this.input.add(Blocks.STONE);
         this.input.add(Blocks.STONEBRICK);
         this.input.add(Blocks.END_STONE);
