@@ -1,5 +1,6 @@
 package abused_master.sacredgeometry.client.render;
 
+import abused_master.abusedlib.render.hud.HudRender;
 import abused_master.abusedlib.utils.FluidUtils;
 import abused_master.sacredgeometry.registry.ModResources;
 import abused_master.sacredgeometry.tileentity.TileEntityVatt;
@@ -48,5 +49,8 @@ public class RenderAcidVatt extends TileEntitySpecialRenderer<TileEntityVatt> {
         }
         GlStateManager.disableBlend();
         GlStateManager.popMatrix();
+
+        HudRender.renderHud(te, x, y, z);
+
     }
 }

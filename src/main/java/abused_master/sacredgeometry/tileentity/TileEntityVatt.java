@@ -1,20 +1,25 @@
 package abused_master.sacredgeometry.tileentity;
 
+import abused_master.abusedlib.render.hud.IHudSupport;
 import abused_master.abusedlib.tileentity.TileEntityBase;
+import abused_master.abusedlib.utils.AbusedUtils;
 import abused_master.sacredgeometry.registry.ModResources;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.util.EnumFacing;
+import net.minecraft.util.math.BlockPos;
 import net.minecraftforge.common.capabilities.Capability;
 import net.minecraftforge.fluids.FluidStack;
 import net.minecraftforge.fluids.FluidTank;
 import net.minecraftforge.fluids.capability.CapabilityFluidHandler;
 
 import javax.annotation.Nullable;
+import java.util.ArrayList;
+import java.util.List;
 
-public class TileEntityVatt extends TileEntityBase {
+public class TileEntityVatt extends TileEntityBase implements IHudSupport {
 
     public FluidTank tank = new FluidTank(4000);
     public ItemStack inventory = ItemStack.EMPTY;
@@ -118,5 +123,25 @@ public class TileEntityVatt extends TileEntityBase {
         return (T) tank;
         }
         return super.getCapability(capability, facing);
+    }
+
+    @Override
+    public EnumFacing getBlockOrientation() {
+        return AbusedUtils.getOrientationHoriz(getBlockMetadata());
+    }
+
+    @Override
+    public boolean isBlockAboveAir() {
+        return getWorld().isAirBlock(pos.up());
+    }
+
+    @Override
+    public BlockPos getBlockPos() {
+        return getPos();
+    }
+
+    @Override
+    public String getDisplay() {
+        return tank.getFluidAmount() + " / " + tank.getCapacity() + " MB";
     }
 }
